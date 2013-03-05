@@ -2,13 +2,12 @@
 
 ### First an example not possible without recreating something like this package
 
-Imagine you have an online shop powered by Meteor. Before you leave the office for the day, you tell your co-worker that one of you should change the description of a specific product, but don't say when. Unaware of each other, you both work quite hard on a new description, and very coincidentally, you both concurrently change the description.
+Many people work at a store running a Meteor server for their shop website.
 
-Neither of you notice this. (Your co-worker immediately shuts his laptop and ignores it, satisfied with his change. But by the eventual consistency rules, your description is live, and so you only ever see your description.) During the same session as your first change, you think that there was an error in your description, and since you don't have time to change it now, you copy your description to your notepad for later, and 'undo' your change to the description, and immediately ignore it until the next day.
+Sometimes more than one person changes a description of an item concurrently.
 
-The next day, your co-worker says that using his new description, you sold many more units. And he was glad his description had been active over night.
+Thanks to this package, even if one of the workers undoes their change to the description, no worker's changes are lost, and the latest description from an employee is shown.
 
-This happened because you were using this package, and your co-worker's version of the description had not been undone, and was now the latest version.
 
 ### What this package can do for you
 
