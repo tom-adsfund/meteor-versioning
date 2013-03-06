@@ -1,4 +1,4 @@
-# Meteor package for versioned (cross-)document (many-)field writes with eventual consistency, and concurrent version de-/re-activation
+# Meteor package for versioned (cross-)document (many-)field writes with eventual consistency, and concurrent undo/redo
 
 ### First an example not possible without recreating something like this package
 
@@ -23,7 +23,7 @@ This package applies some magic to Meteor collections so they become versioned a
 **The benefits of this package are:**
 
 * You can package an arbitrary set of changes across any collections and collection objects into a single version of changes.
-* You can deactivate and reactivate a version from the originating client, while concurrent updates continue from other clients.
+* You can undo and redo changes from the originating client, while concurrent updates continue from other clients.
 * You have an automatic server-side trail of all sets of changes.
 
 *The basis of this technology is the study of Conflict-free Replicative Data Types (CRDTs) originally described by people at Inria, a public science and technology institution in France.*
